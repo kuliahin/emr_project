@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} - EMR</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="{{ url_for('index') }}" class="navbar-brand">EMR System</a>
+            <ul class="navbar-nav">
+                <li><a href="{{ url_for('index') }}">index</a></li>
+                <li><a href="{{ url_for('patient') }}">Patients</a></li>
+                <li><a href="{{ url_for('logout') }}">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header class="hero">
+        <div class="container">
+            <h1>Welcome to the EMR System</h1>
+            <p>Your comprehensive solution for electronic medical records management.</p>
+        </div>
+    </header>
+    <div class="container">
+        <div class="info-cards">
+            <div class="info-card">
+                <h2>Manage Patients</h2>
+                <p>Efficiently manage and update patient records.</p>
+                <a href="{{ url_for('patient') }}" class="btn-primary">Manage Patients</a>
+            </div>
+            <div class="info-card">
+                <h2>View Patients</h2>
+                <p>Access and view detailed information about patients.</p>
+                <a href="{{ url_for('view_patients') }}" class="btn-primary">View Patients</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
